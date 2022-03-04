@@ -1,15 +1,25 @@
 import java.util.ArrayList;
-import java.util.Random;
 
 public class Shapes {
-    Random random = new Random();
-    public Shapes(){
-        ArrayList shapes = new ArrayList();
+    ArrayList<Circle> circles = new ArrayList<Circle>();
+
+    public void addShape(String type, double N){
+        if(type == "circle"){
+            for(int i = 0; i<N; i++){
+                Circle c = new Circle(new Vector(1000), 10);
+                circles.add(c);
+            }
+        } else if(type == "rectangle"){
+            for(int i = 0; i<N; i++){
+                Rectangle r = new Circle(new Vector(1000), 10);
+                circles.add(c);
+            }
+        }
     }
 
-    public void addShape(String type, int N){
-        if(type == "circle"){
-            Circle c = new Circle(random.nextDouble(100), random.nextDouble(100));
+    public void printCenters(){
+        for (Circle c: circles) {
+            System.out.println(c.center().ourCenter());
         }
     }
 }

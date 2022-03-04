@@ -1,10 +1,17 @@
+import java.util.Random;
 public class Vector {
+    Random random = new Random();
     double x = 0;
     double y = 0;
 
     public Vector(double x, double y){
         this.x = x;
         this.y = y;
+    }
+
+    public Vector(double range){
+        this.x = random.nextDouble(range);
+        this.y = random.nextDouble(range);
     }
 
     public double length(){
@@ -22,7 +29,7 @@ public class Vector {
         return vector;
     }
 
-    public void print(){
-        System.out.println("("+this.x + "," + this.y + ")");
+    public String ourCenter(){
+        return "("+this.x + "," + this.y + ")";
     }
 }
