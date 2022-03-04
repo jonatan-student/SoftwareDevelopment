@@ -1,8 +1,10 @@
 public class Main {
     public static void main(String[] args) {
         Shapes Collection = new Shapes();
-        Collection.addShape("circle", 2);
-        Collection.addShape("rectangle", 2);
+        Collection.addShape("circle", 1);
+        Collection.addShape("rectangle", 1);
         Collection.printCenters();
+        Collection.printAreas();
+        Collection.printPerimeter();
     }
 }

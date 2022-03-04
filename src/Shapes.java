@@ -17,13 +17,30 @@ public class Shapes {
             }
         }
     }
+    public void printPerimeter(){
+        for (Circle c: circles){
+            System.out.println("Circle " + circles.indexOf(c)+ " Circumference: " + c.GetCircumference());
+        }
+        for(Rectangle r: rectangles){
+            System.out.println("Rectangle " + rectangles.indexOf(r)+ " Perimeter: " + r.GetCircumference());
+        }
+    }
+
+    public void printAreas(){
+        for(Circle c: circles){
+            System.out.println("Circle " + circles.indexOf(c)+ " area: " + c.GetCircumference());
+        }
+        for(Rectangle r: rectangles){
+            System.out.println("Rectangle " + rectangles.indexOf(r)+ " area: " + r.GetArea());
+        }
+    }
 
     public void printCenters(){
         for (Circle c: circles) {
-            System.out.println("Circle "+circles.indexOf(c)+": "+c.center().ourCenter());
+            System.out.println("Circle "+circles.indexOf(c)+" center: "+c.center().ourCenter());
         }
         for (Rectangle r: rectangles) {
-            System.out.println("Rectangle "+rectangles.indexOf(r)+1+": "+r.center().ourCenter());
+            System.out.println("Rectangle "+rectangles.indexOf(r)+" center: "+r.center().ourCenter());
         }
     }
 }
