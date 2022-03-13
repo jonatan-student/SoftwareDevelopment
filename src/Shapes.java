@@ -4,22 +4,22 @@ public class Shapes {
     ArrayList<Circle> circles = new ArrayList<>();
     ArrayList<Rectangle> rectangles = new ArrayList<>();
     ArrayList<Triangle> triangles = new ArrayList<>();
-    Vector rando = new Vector(500, 500);
+    Vector rando = new Vector(new Vector(750).x, new Vector(750).y);
 
     public void addShape(String type, double N){
         if(type == "circle"){
             for(int i = 0; i<N; i++){
-                Circle c = new Circle(new Vector(1000), 10);
+                Circle c = new Circle(new Vector(750), 75);
                 circles.add(c);
             }
         } else if(type == "rectangle"){
             for(int i = 0; i<N; i++){
-                Rectangle r = new Rectangle(new Vector(1000), 100, 50);
+                Rectangle r = new Rectangle(new Vector(750), 100, 50);
                 rectangles.add(r);
             }
         } else if (type == "triangle"){
             for(int i = 0; i<N; i++){
-                Triangle t = new Triangle(new Vector(1000), new Vector(1000), new Vector(1000));
+                Triangle t = new Triangle(new Vector(750), new Vector(750), new Vector(750));
                 triangles.add(t);
             }
         }

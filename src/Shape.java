@@ -7,6 +7,7 @@ public abstract class Shape {
 
     public abstract boolean containsPoint(Vector point);
 
+
     public double dist(Shape shape){
         Vector dist = this.center().sub(shape.center());
         return dist.length();
