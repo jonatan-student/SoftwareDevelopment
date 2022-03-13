@@ -31,7 +31,7 @@ public class Shapes {
             System.out.println("Rectangle " + rectangles.indexOf(r)+ " Perimeter: " + r.GetCircumference());
         }
         for(Triangle t: triangles){
-            System.out.println("Triangle " + rectangles.indexOf(t)+ " Perimeter: " + t.GetCircumference());
+            System.out.println("Triangle " + triangles.indexOf(t)+ " Perimeter: " + t.GetCircumference());
         }
     }
 
@@ -43,7 +43,7 @@ public class Shapes {
             System.out.println("Rectangle " + rectangles.indexOf(r)+ " area: " + r.GetArea());
         }
         for(Triangle t: triangles){
-            System.out.println("Triangle " + rectangles.indexOf(t)+ " area: " + t.GetArea());
+            System.out.println("Triangle " + triangles.indexOf(t)+ " area: " + t.GetArea());
         }
     }
 
@@ -55,7 +55,7 @@ public class Shapes {
             System.out.println("Rectangle "+rectangles.indexOf(r)+" center: "+r.center().ourCenter());
         }
         for(Triangle t: triangles){
-            System.out.println("Triangle " + rectangles.indexOf(t)+ " center: " + t.center().ourCenter());
+            System.out.println("Triangle " + triangles.indexOf(t)+ " center: " + t.center().ourCenter());
         }
     }
 }
