@@ -1,4 +1,5 @@
 import java.util.Random;
+import java.lang.Math;
 public class Vector {
     Random random = new Random();
     double x = 0;
@@ -27,6 +28,10 @@ public class Vector {
     public Vector sub(Vector other){
         Vector vector = new Vector(this.x - other.x, this.y - other.y);
         return vector;
+    }
+
+    public double getAngle(Vector other){
+        return Math.atan(this.length()/other.length());
     }
 
     public String ourCenter(){

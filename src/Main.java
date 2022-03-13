@@ -7,5 +7,6 @@ public class Main {
         Collection.printCenters();
         Collection.printAreas();
         Collection.printPerimeter();
+        Collection.checkPoints();
     }
 }

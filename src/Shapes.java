@@ -4,6 +4,7 @@ public class Shapes {
     ArrayList<Circle> circles = new ArrayList<>();
     ArrayList<Rectangle> rectangles = new ArrayList<>();
     ArrayList<Triangle> triangles = new ArrayList<>();
+    Vector rando = new Vector(500, 500);
 
     public void addShape(String type, double N){
         if(type == "circle"){
@@ -13,7 +14,7 @@ public class Shapes {
             }
         } else if(type == "rectangle"){
             for(int i = 0; i<N; i++){
-                Rectangle r = new Rectangle(new Vector(1000), 10, 5);
+                Rectangle r = new Rectangle(new Vector(1000), 100, 50);
                 rectangles.add(r);
             }
         } else if (type == "triangle"){
@@ -56,6 +57,30 @@ public class Shapes {
         }
         for(Triangle t: triangles){
             System.out.println("Triangle " + triangles.indexOf(t)+ " center: " + t.center().ourCenter());
+        }
+    }
+
+    public void checkPoints(){
+        for(Circle c: circles){
+            if(c.containsPoint(rando)){
+                System.out.println("The random point is in circle " + circles.indexOf(c));
+            } else {
+                System.out.println("The random point is not in circle " + circles.indexOf(c));
+            }
+        }
+        for(Rectangle r: rectangles){
+            if(r.containsPoint(rando)){
+                System.out.println("the random point is in rectangle " + rectangles.indexOf(r));
+            } else {
+                System.out.println("the random point is not in rectangle " + rectangles.indexOf(r));
+            }
+        }
+        for(Triangle t: triangles){
+            if (t.containsPoint(rando)){
+                System.out.println("the random point is in triangle " + triangles.indexOf(t));
+            } else{
+                System.out.println("the random point is not in triangle " + triangles.indexOf(t));
+            }
         }
     }
 }
