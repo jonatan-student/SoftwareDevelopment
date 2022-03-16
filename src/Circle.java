@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.lang.Math;
 public class Circle extends Shape {
     Vector center;
@@ -29,5 +30,13 @@ public class Circle extends Shape {
         if (p.length()<this.radius){
             return true;
         } else return false;
+    }
+
+    @Override
+    public void draw(Graphics2D g2d) {
+        g2d.setColor(Color.cyan);
+        g2d.fillOval((int) this.center().x, (int) this.center().y, (int) this.radius, (int) this.radius);
+        g2d.setColor(Color.black);
+        g2d.drawOval((int) this.center().x, (int) this.center().y, (int) this.radius, (int) this.radius);
     }
 }

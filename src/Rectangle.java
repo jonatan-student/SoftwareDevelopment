@@ -1,3 +1,6 @@
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
+
 public class Rectangle extends Shape {
     Vector topLeft;
     double height, width;
@@ -26,5 +29,13 @@ public class Rectangle extends Shape {
         if (point.x < this.topLeft.x || point.x > (this.topLeft.x + this.width) || point.y > this.topLeft.y|| point.y < this.topLeft.y - this.height){
             return false;
         } else return true;
+    }
+
+    @Override
+    public void draw(Graphics2D g2d) {
+        g2d.setColor(Color.yellow);
+        g2d.fillRect((int) this.topLeft.x, (int) this.topLeft.y, (int) this.width, (int) this.height);
+        g2d.setColor(Color.black);
+        g2d.drawRect((int) this.topLeft.x, (int) this.topLeft.y, (int) this.width, (int) this.height);
     }
 }

@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.lang.Math;
 public class Triangle extends Shape{
     Vector vertex1, vertex2, vertex3;
@@ -32,7 +33,19 @@ public class Triangle extends Shape{
         Vector b = point.sub(this.vertex2);
         Vector c = point.sub(this.vertex3);
         double theta = a.getAngle(b)+b.getAngle(c)+c.getAngle(a);
-        if(theta < 2*Math.PI) return false;
+        if(theta <= 2*Math.PI) return false;
         else return true;
+    }
+
+    @Override
+    public void draw(Graphics2D g2d) {
+        g2d.setColor(Color.magenta);
+        Polygon triangle = new Polygon();
+        triangle.addPoint((int) this.vertex1.x, (int) this.vertex1.y);
+        triangle.addPoint((int) this.vertex2.x, (int) this.vertex2.y);
+        triangle.addPoint((int) this.vertex3.x, (int) this.vertex3.y);
+        g2d.fillPolygon(triangle);
+        g2d.setColor(Color.black);
+        g2d.drawPolygon(triangle);
     }
 }
