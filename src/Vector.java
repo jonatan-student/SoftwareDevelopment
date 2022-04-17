@@ -16,7 +16,7 @@ public class Vector {
     }
 
     public double length(){
-        double l = Math.sqrt(Math.pow(this.x,2)+Math.pow(y,2));
+        double l = Math.sqrt(Math.pow(this.x,2)+Math.pow(this.y,2));
         return l;
     }
 
@@ -29,9 +29,14 @@ public class Vector {
         Vector vector = new Vector(this.x - other.x, this.y - other.y);
         return vector;
     }
+    public double dot(Vector other){
+        double result = (this.x * other.x) + (this.y * other.y);
+        return result;
+    }
 
     public double getAngle(Vector other){
-        return Math.atan(this.length()/other.length());
+        double result = Math.acos(this.dot(other)/(this.length()*other.length()));
+        return result;
     }
 
     public String ourCenter(){

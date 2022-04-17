@@ -8,7 +8,7 @@ public class DrawingCanvas extends JComponent{
 
     public DrawingCanvas(int w, int h){
         this.width = w; this.height = h;
-        shapes = new Shapes(0,0,60, this.width, this.height);
+        shapes = new Shapes(1,1,1, this.width, this.height);
     }
 
     protected void paintComponent(Graphics g){

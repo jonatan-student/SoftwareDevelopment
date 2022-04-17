@@ -33,8 +33,10 @@ public class Triangle extends Shape{
         Vector b = point.sub(this.vertex2);
         Vector c = point.sub(this.vertex3);
         double theta = a.getAngle(b)+b.getAngle(c)+c.getAngle(a);
-        if(theta <= 2*Math.PI) return false;
-        else return true;
+        if(theta >= 2*Math.PI){
+            return true;
+        }
+        else {return false;}
     }
 
     @Override
